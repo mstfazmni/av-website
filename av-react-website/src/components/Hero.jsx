@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({setHeroHeightRef}) => {
+    const heroRef = useRef(null);
+
+    useEffect(() => {
+        if (heroRef.current && setHeroHeightRef) {
+            setHeroHeightRef(heroRef.current.offsetHeight);
+        }
+    }, [setHeroHeightRef])
     return(
-        <div className="hero-container">
+        <div className="hero-container" ref={heroRef}>
             <video autoPlay muted loop className="bg-video">
                 <source src={`${process.env.PUBLIC_URL}/assets/hero.mp4`} type="video/mp4" />
             </video>

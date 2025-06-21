@@ -5,18 +5,18 @@ import Container from 'react-bootstrap/Container';
 import './Navbar.css';
 
 
-const CustomNavbar = () => {
+const CustomNavbar = ({heroHeight}) => {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(()=> {
         const handleScroll = () => {
             const offset = window.scrollY;
-            setScrolled(offset > 100); // Add solid bg after 100px scroll
+            setScrolled(offset > heroHeight); // Add solid bg after heroHeight scroll
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [])
+    }, [heroHeight])
 
     return (
         <Navbar className={`custom-navbar ${scrolled ? 'scrolled' : ''}`} expand="lg" fixed="top">
