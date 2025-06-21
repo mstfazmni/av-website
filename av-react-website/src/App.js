@@ -7,11 +7,7 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* <Helmet>
-        <title>Calgary Renovation Services</title>
-        <meta name="description" content="Trusted Renovation Experts in Calgary" />
-      </Helmet> */}
-    <Home />
+      <Home />
     </>
   
   );

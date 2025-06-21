@@ -26,3 +26,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.hero-content a {
+  font-weight: 500;
+}
