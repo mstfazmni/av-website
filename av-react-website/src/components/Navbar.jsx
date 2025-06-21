@@ -1,12 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import './Navbar.css';
 
 
 const CustomNavbar = () => {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(()=> {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            setScrolled(offset > 100); // Add solid bg after 100px scroll
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [])
+
     return (
-        <Navbar bg="light" variant="light" expand="lg" fixed="top">
+        <Navbar className={`custom-navbar ${scrolled ? 'scrolled' : ''}`} expand="lg" fixed="top">
             <Container>
                 
                 <Navbar.Brand href="/">
