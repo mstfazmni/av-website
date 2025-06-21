@@ -1,11 +1,11 @@
 import React from "react";
-import '../assets/hero.mp4';
+import './Hero.css';
 
 const Hero = () => {
     return(
         <div className="hero-container">
             <video autoPlay muted loop className="bg-video">
-                <source src="/assets/hero.mp4" type="video/mp4" />
+                <source src={`${process.env.PUBLIC_URL}/assets/hero.mp4`} type="video/mp4" />
             </video>
             <div className="overlay" />
             <div className="hero-content text-center">
