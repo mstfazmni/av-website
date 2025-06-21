@@ -6,9 +6,18 @@ import Container from 'react-bootstrap/Container';
 
 const CustomNavbar = () => {
     return (
-        <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+        <Navbar bg="light" variant="light" expand="lg" fixed="top">
             <Container>
-                <Navbar.Brand href="/">Renovation Co</Navbar.Brand>
+                
+                <Navbar.Brand href="/">
+                    <img
+                        src={`${process.env.PUBLIC_URL}/assets/av-logo.png`}
+                        alt="AV Built Construction Logo"
+                        height="50"
+                        className="d-inline-block align-middle"
+                    />
+                </Navbar.Brand>
+
                 <Navbar.Toggle />
                 <Navbar.Collapse>
                     <Nav className="ms-auto">
