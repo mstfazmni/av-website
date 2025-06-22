@@ -1,6 +1,7 @@
 // src/components/About.js
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import CountUp from 'react-countup';
 import './About.css';
 
 const About = () => {
@@ -46,15 +47,21 @@ const About = () => {
 
         <Row className="text-center">
           <Col md={4}>
-            <h1 className="fw-bold text-primary">100%</h1>
+            <h1 className="fw-bold text-primary">
+                <CountUp end={100} duration={3} suffix="%" />
+            </h1>
             <p className="fw-semibold">Customer Satisfaction</p>
           </Col>
           <Col md={4}>
-            <h1 className="fw-bold text-primary">11+</h1>
+            <h1 className="fw-bold text-primary">
+                <CountUp end={11} duration={5} suffix='+' />
+            </h1>
             <p className="fw-semibold">Years in Business</p>
           </Col>
           <Col md={4}>
-            <h1 className="fw-bold text-primary">536+</h1>
+            <h1 className="fw-bold text-primary">
+                <CountUp end={536} duration={3} suffix="+" />
+            </h1>
             <p className="fw-semibold">Projects Completed</p>
           </Col>
         </Row>
