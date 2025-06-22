@@ -1,14 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Quote from './pages/Quote';
 import './App.css';
 
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
-  
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/quote' element={<Quote />} />
+      </Routes>
+    </Router>
   );
 }
 

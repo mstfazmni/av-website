@@ -19,7 +19,7 @@ const Hero = ({setHeroHeightRef}) => {
                 <h1 className="text-white fw-bold">BUILDING YOUR VISION</h1>
                 <p className="text-white">Your vision’s trusted construction partner</p>
                 <div>
-                    <a href="#quote" className="btn btn-primary m-2">Request a Quote</a>
+                    <a href="/quote" target="_blank" rel="noopener noreferrer" className="btn btn-primary m-2">Request a Quote</a>
                     <a href="#contact" className="btn btn-light m-2">Contact Us</a>
                 </div>
 
