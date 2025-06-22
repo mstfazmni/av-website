@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 import './Quote.css';
 
 const Quote = () => {
+
+  const queryParams = new URLSearchParams(window.location.search);
+  const selectedService = queryParams.get("service");
+
   return (
     <section className="py-5 bg-light">
       <Container>
@@ -49,14 +53,27 @@ const Quote = () => {
 
               <Form.Group className="mb-3">
                 <Form.Label>Service Call Type</Form.Label>
-                <Form.Check type="checkbox" label="Siding" name="service[]" value="Siding" />
-                <Form.Check type="checkbox" label="Stucco" name="service[]" value="Stucco" />
-                <Form.Check type="checkbox" label="Roofing" name="service[]" value="Roofing" />
-                <Form.Check type="checkbox" label="Windows" name="service[]" value="Windows" />
-                <Form.Check type="checkbox" label="Doors" name="service[]" value="Doors" />
-                <Form.Check type="checkbox" label="Skylights" name="service[]" value="Skylights" />
-                <Form.Check type="checkbox" label="Insurance Claim" name="service[]" value="Insurance Claim" />
-                <Form.Check type="checkbox" label="Insulation" name="service[]" value="Insulation" />
+             {[
+                { id: "siding", label: "Siding" },
+                { id: "accessories", label: "Accessories" },
+                { id: "design", label: "Design" },
+                { id: "stucco", label: "Stucco" },
+                { id: "roofing", label: "Roofing" },
+                { id: "windows", label: "Windows" },
+                { id: "doors", label: "Doors" },
+                { id: "skylights", label: "Skylights" },
+                { id: "insurance", label: "Insurance Claim" },
+                { id: "insulation", label: "Insulation" },
+              ].map((service) => (
+                <Form.Check
+                  key={service.id}
+                  type="checkbox"
+                  label={service.label}
+                  name="service[]"
+                  value={service.id}
+                  defaultChecked={selectedService === service.id}
+                />
+              ))}
               </Form.Group>
 
               <Form.Group className="mb-4">

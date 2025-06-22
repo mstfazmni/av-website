@@ -90,11 +90,19 @@ const Contact = () => {
                                         <p className="mb-0">Sunday: Closed</p>
                                     </div>
                                 </Col>
-                                <Col sm={6}>
-                                    <div className="contact-box h-100">
-                                        <a href="/quote" target="_blank" rel="noopener noreferrer" className="btn btn-primary w-100">Request a Quote</a>
-                                    </div>
-                                </Col>
+                                {/* Quote Button */}
+                                <Row className="mt-3">
+                                    <Col>
+                                        <a
+                                        href="/quote"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="btn btn-outline-primary w-100"
+                                        >
+                                        Request a Quote
+                                        </a>
+                                    </Col>
+                                </Row>
                         </Row>
                     </Col>
                 </Row>
