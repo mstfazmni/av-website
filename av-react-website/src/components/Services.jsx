@@ -6,37 +6,37 @@ const services = [
     {
         title: "Siding",
         description: "Experienced installers of James Hardie Fiber Cement Siding, Vinyl Siding, Metal siding, and wood siding",
-        image: "/assets/"
+        image: "/assets/siding.jpg"
     },
 
     {
         title: "Accessories",
         description: "Full advance 24/7 services for your house.",
-        image: "/assets/"
+        image: "/assets/sidingacces.jpg"
     },
 
     {
         title: "Stucco & Masonry",
         description: "Full stucco exteriors including EIFS. Full brick and stone exterior installation.",
-        image: "/assets/"
+        image: "/assets/stucco.jpg"
     },
 
     {
         title: "Windows, Doors, & Skylights",
         description: "All Weather Windows Renovations supplies and installs top of the line ENERGY STAR® windows and doors suited for Canadian weather",
-        image: "/assets/"
+        image: "/assets/window.jpg"
     },
 
     {
         title: "Roofing",
         description: "Experienced with installation of all types of roofing, including: asphalt shingles, cedar shakes, rubber roofing, metal roofing, and flat roofing applications.",
-        image: "/assets/"
+        image: "/assets/roofing.jpg"
     },
 
     {
         title: "Project design",
         description: "Start your exterior renovation with a consultation from AV Built Construction! Use our unique design programs to help you decide which products.",
-        image: "/assets/"
+        image: "/assets/projectd.jpg"
     },
 ];
 
