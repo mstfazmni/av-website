@@ -65,7 +65,7 @@ const Quote = () => {
               </Form.Group>
 
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+              <input type="hidden" name="_next" value="http://localhost:3000/thank-you" />
 
               <Button variant="primary" type="submit" className="w-100 mb-3">
                 Submit Quote Request
