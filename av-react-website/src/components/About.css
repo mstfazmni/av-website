@@ -11,10 +11,13 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 h1 {
   font-size: 3rem;
   margin-bottom: 0;
+}
+.card-custom-bg {
+  background-color: #f7f7f77c; /* soft gray */
 }
