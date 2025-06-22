@@ -41,7 +41,7 @@ const Contact = () => {
 
                             {/* Optional: hide CAPTCHA & redirect */}
                             <input type="hidden" name="_captcha" value="false" />
-                            <input type="hidden" name="_next" value="/thank-you" />
+                            <input type="hidden" name="_next" value="https://av-construction.netlify.app/thank-you" />
 
                             <Button variant="primary" type="submit" className="w-100">Send Message</Button>
                         </Form> 
