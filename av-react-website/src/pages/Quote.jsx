@@ -53,27 +53,27 @@ const Quote = () => {
 
               <Form.Group className="mb-3">
                 <Form.Label>Service Call Type</Form.Label>
-             {[
-                { id: "siding", label: "Siding" },
-                { id: "accessories", label: "Accessories" },
-                { id: "design", label: "Design" },
-                { id: "stucco", label: "Stucco" },
-                { id: "roofing", label: "Roofing" },
-                { id: "windows", label: "Windows" },
-                { id: "doors", label: "Doors" },
-                { id: "skylights", label: "Skylights" },
-                { id: "insurance", label: "Insurance Claim" },
-                { id: "insulation", label: "Insulation" },
-              ].map((service) => (
-                <Form.Check
-                  key={service.id}
-                  type="checkbox"
-                  label={service.label}
-                  name="service[]"
-                  value={service.id}
-                  defaultChecked={selectedService === service.id}
-                />
-              ))}
+                  {[
+                      { id: "siding", label: "Siding" },
+                      { id: "accessories", label: "Accessories" },
+                      { id: "design", label: "Design" },
+                      { id: "stucco", label: "Stucco" },
+                      { id: "roofing", label: "Roofing" },
+                      { id: "windows", label: "Windows" },
+                      { id: "doors", label: "Doors" },
+                      { id: "skylights", label: "Skylights" },
+                      { id: "insurance", label: "Insurance Claim" },
+                      { id: "insulation", label: "Insulation" },
+                    ].map((service) => (
+                      <Form.Check
+                        key={service.id}
+                        type="checkbox"
+                        label={service.label}
+                        name="service[]"
+                        value={service.id}
+                        defaultChecked={selectedService === service.id}
+                      />
+                    ))}
               </Form.Group>
 
               <Form.Group className="mb-4">
