@@ -62,8 +62,12 @@ const Quote = () => {
                       { id: "windows", label: "Windows" },
                       { id: "doors", label: "Doors" },
                       { id: "skylights", label: "Skylights" },
-                      { id: "insurance", label: "Insurance Claim" },
-                      { id: "insulation", label: "Insulation" },
+                      { id: "basement", label: "Basement" },
+                      { id: "drywall", label: "Drywall" },
+                      { id: "painting", label: "Painting" },
+                      { id: "bathroom", label: "Bathroom" },
+                      { id: "flooring", label: "Flooring" },
+                      { id: "tile", label: "Tile" },
                     ].map((service) => (
                       <Form.Check
                         key={service.id}
