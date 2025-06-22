@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import CustomNavbar from '../components/Navbar';
 import Services from '../components/Services';
 import About from '../components/About';
+import Contact from "../components/Contact";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <Hero setHeroHeightRef={setHeroHeight}/>
             <Services />
             <About />
+            <Contact />
         </>
     );
 };

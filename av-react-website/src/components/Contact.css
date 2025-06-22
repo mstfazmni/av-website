@@ -1,0 +1,16 @@
+#contact label {
+  font-weight: 600;
+}
+
+#contact button {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+.contact-box {
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: translateY(-4px);
+}
