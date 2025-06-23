@@ -9,9 +9,9 @@ const Contact = () => {
                 <h2 className="text-center fw-bold mb-4">Contact Us</h2>
                 <p className="text-center mb-4">We’d love to hear about your project. Fill out the form and we’ll get back to you shortly.</p>
 
-                <Row className="gy-5">
+                <Row className="g-4">
                     {/* LEFT: Form */}
-                    <Col md={6}>
+                    <Col className="border border-1 p-3" lg={8}>
                     {/* replace the email with customer's email */}
                         <Form action="https://formsubmit.co/zmnimstfa@gmail.com" method="POST">
                             <Row className="mb-3">
@@ -49,7 +49,8 @@ const Contact = () => {
 
                     {/* RIGHT: Contact Info */}
 
-                    <Col md={6}>
+                    <Col className="border border-1 p-3" lg={4}>
+                        <h2 className="fw-bold mb-4">Get In Touch</h2>
                         <Row className="gy-4">
                                 <Col sm={6}>
                                     <div className="contact-box h-100">
@@ -73,7 +74,7 @@ const Contact = () => {
                                         </p>
                                     </div>
                                 </Col>
-                                <Col sm={6}>
+                                <Col sm={12}>
                                     <div className="contact-box h-100">
                                         <h5 className="fw-bold mb-1">📧 Email</h5>
                                         <p className="mb-0">
@@ -83,7 +84,7 @@ const Contact = () => {
                                         </p>
                                     </div>
                                 </Col>
-                                <Col sm={6}>
+                                <Col sm={12}>
                                     <div className="contact-box h-100">
                                         <h5 className="fw-bold mb-1">🕑 Hours</h5>
                                         <p className="mb-0">Mon–Sat: 8am – 6pm</p>
