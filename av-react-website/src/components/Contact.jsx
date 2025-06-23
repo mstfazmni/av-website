@@ -1,8 +1,14 @@
-import React from "react";
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import React, {useState} from "react";
+import { Container, Row, Col, Form, Button, Spinner } from 'react-bootstrap';
 import '../components/Contact.css';
 
 const Contact = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = () => {
+        setIsSubmitting(true);
+    };
+
     return (
         <section id="contact" className="py-5 bg-light">
             <Container>
@@ -11,9 +17,9 @@ const Contact = () => {
 
                 <Row className="g-4">
                     {/* LEFT: Form */}
-                    <Col className="border border-1 p-3" lg={8}>
+                    <Col lg={8}>
                     {/* replace the email with customer's email */}
-                        <Form action="https://formsubmit.co/zmnimstfa@gmail.com" method="POST">
+                        <Form action="https://formsubmit.co/zmnimstfa@gmail.com" method="POST"  onSubmit={handleSubmit}>
                             <Row className="mb-3">
                                 <Col md={6}>
                                     <Form.Group>
@@ -43,13 +49,21 @@ const Contact = () => {
                             <input type="hidden" name="_captcha" value="false" />
                             <input type="hidden" name="_next" value="https://av-construction.netlify.app/thank-you" />
 
-                            <Button variant="primary" type="submit" className="w-100">Send Message</Button>
+                            <Button type="submit" className="w-100" variant="primary" disabled={isSubmitting}>
+                                {isSubmitting ? (
+                                <>
+                                    <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /> Sending...
+                                </>
+                                ) : (
+                                'Send Message'
+                                )}
+                            </Button>
                         </Form> 
                     </Col>
 
                     {/* RIGHT: Contact Info */}
 
-                    <Col className="border border-1 p-3" lg={4}>
+                    <Col className="border border-1 p-3 rounded" lg={4}>
                         <h2 className="fw-bold mb-4">Get In Touch</h2>
                         <Row className="gy-4">
                                 <Col sm={6}>
