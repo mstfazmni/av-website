@@ -1,13 +1,18 @@
 // src/pages/Quote.js
-import React from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import React, {useState} from 'react';
+import { Container, Row, Col, Form, Button, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Quote.css';
 
 const Quote = () => {
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const queryParams = new URLSearchParams(window.location.search);
   const selectedService = queryParams.get("service");
+
+   const handleSubmit = () => {
+    setIsSubmitting(true);
+  };
 
   return (
     <section className="py-5 bg-light">
@@ -25,7 +30,7 @@ const Quote = () => {
         <Row className="justify-content-center">
           <Col md={8}>
           {/* Replace with cutomer's email */}
-            <Form action="https://formsubmit.co/zmnimstfa@gmail.com" method="POST">
+            <Form action="https://formsubmit.co/zmnimstfa@gmail.com" method="POST" onSubmit={handleSubmit}>
               <Form.Group className="mb-3">
                 <Form.Label>Your Name</Form.Label>
                 <Form.Control type="text" name="name" required />
@@ -88,8 +93,14 @@ const Quote = () => {
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://av-construction.netlify.app/thank-you" />
 
-              <Button variant="primary" type="submit" className="w-100 mb-3">
-                Submit Quote Request
+              <Button type="submit" className="w-100 mb-3" variant="primary" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /> Sending...
+                  </>
+                ) : (
+                  "Submit Quote Request"
+                )}
               </Button>
 
               <div className="text-center">
