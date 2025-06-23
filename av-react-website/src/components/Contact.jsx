@@ -55,7 +55,7 @@ const Contact = () => {
                                 <Col sm={6}>
                                     <div className="contact-box h-100">
                                         <h5 className="fw-bold mb-1">📍 Address</h5>
-                                        <p className="mb-0">Calgary, Alberta, Canada</p>
+                                        <p className="mb-0">2350 Baywater Cres, Airdrie, AB T4B 0T4, Canada</p>
                                     </div>
                                 </Col>
                              
@@ -113,7 +113,7 @@ const Contact = () => {
                         <iframe
                             title="Google Map"
                             // replace the src with actual location
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10068.329064327196!2d-114.0719!3d51.0447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371703ce09cf7c5%3A0xdeb5f4292e1ff007!2sCalgary%2C%20AB!5e0!3m2!1sen!2sca!4v1719000000000"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.724839045494!2d-114.0378037840802!3d51.28257877959054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537173028a841a29%3A0xc0152bc5ec585999!2s2350%20Baywater%20Cres%20SW%2C%20Airdrie%2C%20AB%20T4B%200T4%2C%20Canada!5e0!3m2!1sen!2sca!4v1719080909832!5m2!1sen!2sca"
                             width="100%"
                             height="300"
                             style={{ border: 0, borderRadius: "10px" }}
