@@ -92,8 +92,8 @@ const Contact = () => {
                                     </div>
                                 </Col>
                                 {/* Quote Button */}
-                                <Row className="mt-3">
-                                    <Col>
+                                {/* <Row className="mt-3"> */}
+                                    <Col sm={12} className="mt-1">
                                         <a
                                         href="/quote"
                                         target="_blank"
@@ -103,7 +103,7 @@ const Contact = () => {
                                         Request a Quote
                                         </a>
                                     </Col>
-                                </Row>
+                                {/* </Row> */}
                         </Row>
                     </Col>
                 </Row>
