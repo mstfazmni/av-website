@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import './Services.css';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const exteriorServices = [
     {
