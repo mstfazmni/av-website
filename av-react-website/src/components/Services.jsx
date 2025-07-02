@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import './Services.css';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 const exteriorServices = [
     {
@@ -80,9 +80,11 @@ const interiorServices = [
     }
 ];
 
+
+
 const ServicesSection = ({ title, services }) => (
     <>
-        <h3 className="text-center my-4 fw-bold">{title}</h3>
+        {/* <h3 className="text-center my-4 fw-bold">{title}</h3> */}
         <Row className="mb-5">
             {services.map((service, index) => (
                 <Col md={4} className="mb-4" key={index}>
@@ -109,13 +111,51 @@ const ServicesSection = ({ title, services }) => (
     </>
 );
 const Services = () => {
-  return (
+    const [activeTab, setActiveTab] = useState("exterior");
+
+    const exteriorRef = useRef(null);
+    const interiorRef = useRef(null);
+    const underlineRef = useRef(null);
+
+    useEffect(() => {
+        const activeBtn = activeTab === 'exterior' ? exteriorRef.current : interiorRef.current;
+        if (activeBtn && underlineRef.current) {
+            const { offsetLeft, offsetWidth } = activeBtn;
+            underlineRef.current.style.transform = `translateX(${offsetLeft}px)`;
+            underlineRef.current.style.width = `${offsetWidth}px`;
+        }
+    }, [activeTab]);
+
+    return (
         <section id="services" className="py-5 bg-light">
             <Container>
                 <h2 className="text-center mb-5 fw-bold">Our Services</h2>
-                <ServicesSection title="Exterior Services" services={exteriorServices} />
-                <hr />
-                <ServicesSection title="Interior Services" services={interiorServices} />
+
+                <div className="tab-buttons-container">
+                    <div className="tab-buttons">
+                        <button
+                            ref={exteriorRef}
+                            className={`service-tab ${activeTab === 'exterior' ? 'active' : ''}`}
+                            onClick={() => setActiveTab("exterior")}
+                        >
+                            Exterior
+                        </button>
+                        <button
+                            ref={interiorRef}
+                            className={`service-tab ${activeTab === 'interior' ? 'active' : ''}`}
+                            onClick={() => setActiveTab("interior")}
+                        >
+                            Interior
+                        </button>
+                        <span ref={underlineRef} className="underline" />
+                    </div>
+                </div>
+
+                {activeTab === "exterior" ? (
+                    <ServicesSection title="Exterior Services" services={exteriorServices} />
+                ) : (
+                    <ServicesSection title="Interior Services" services={interiorServices} />
+                )}
             </Container>
         </section>
     );
