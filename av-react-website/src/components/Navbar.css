@@ -1,19 +1,80 @@
+/* Base Navbar Styling */
 .custom-navbar {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: transparent;
+  padding: 0.75rem 1rem;
+  z-index: 999;
 }
 
-.custom-navbar .nav-link,
-.custom-navbar .navbar-brand {
+.custom-navbar .navbar-brand img {
+  max-height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.custom-navbar .nav-link {
   color: white !important;
+  margin: 0 0.75rem;
+  position: relative;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
+/* Underline effect */
+.custom-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Scrolled navbar */
 .custom-navbar.scrolled {
   background-color: #ffffff !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .custom-navbar.scrolled .nav-link,
 .custom-navbar.scrolled .navbar-brand {
   color: #212529 !important;
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .custom-navbar .nav-link {
+    color: white !important;
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .custom-navbar.scrolled .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .custom-navbar.scrolled .nav-link {
+    color: #212529 !important;
+  }
+
+  .custom-navbar .nav-link::after {
+    bottom: -5px;
+  }
 }
