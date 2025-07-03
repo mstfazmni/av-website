@@ -34,7 +34,7 @@ const Hero = ({ setHeroHeightRef }) => {
           </p>
           <span className="text-white d-none d-md-inline">|</span>
           <p className="m-0 text-white">
-            📞 <a href="tel:+1584378887" className="contact-link">+1 (584) 378-887</a>
+            📞 <a href="tel:+15874378887" className="contact-link">+1 (587) 437-8887</a>
           </p>
           <span className="text-white d-none d-md-inline">|</span>
           <p className="m-0 text-white">
