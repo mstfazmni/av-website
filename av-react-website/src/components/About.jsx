@@ -17,7 +17,7 @@ const About = () => {
             <h2 className="text-center fw-bold mb-4">How We Do It?</h2>
 
             <p className="text-center mx-auto mb-5" style={{ maxWidth: '800px' }}>
-            AV Built Construction is a family-run business with over <b>11 years</b> of experience. Our mission is to provide the highest level of professionalism and customer service possible. We aim to meet your exterior needs with clarity, organization, and timely delivery.
+            AV Built Construction is a family-run business with over <b>12 years</b> of experience. Our mission is to provide the highest level of professionalism and customer service possible. We aim to meet your exterior needs with clarity, organization, and timely delivery.
             </p>
 
             <Row className="mb-5">
@@ -25,7 +25,7 @@ const About = () => {
                 <Card className="text-center shadow-sm border-0 mb-2 card-custom-bg">
                 <Card.Body>
                     <h5 className="fw-bold">🏆 Workmanship Warranty</h5>
-                    <p>Up to 10 years</p>
+                    <p>Up to 7 years</p>
                 </Card.Body>
                 </Card>
             </Col>
@@ -60,13 +60,13 @@ const About = () => {
                 </Col>
                 <Col md={4} ref={ref2}>
                     <h1 className="fw-bold text-primary">
-                    {inView2 && <CountUp end={11} duration={3} suffix="+" />}
+                    {inView2 && <CountUp end={12} duration={3} suffix="+" />}
                     </h1>
                     <p className="fw-semibold">Years in Business</p>
                 </Col>
                 <Col md={4} ref={ref3}>
                     <h1 className="fw-bold text-primary">
-                    {inView3 && <CountUp end={536} duration={3} suffix="+" />}
+                    {inView3 && <CountUp end={1000} duration={3} suffix="+" />}
                     </h1>
                     <p className="fw-semibold">Projects Completed</p>
                 </Col>
