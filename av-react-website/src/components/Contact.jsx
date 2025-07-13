@@ -10,7 +10,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-5 bg-light">
+        <section id="contact" className="py-5 bg-white">
             <Container>
                 <h2 className="text-center fw-bold mb-4">Contact Us</h2>
                 <p className="text-center mb-4">We’d love to hear about your project. Fill out the form and we’ll get back to you shortly.</p>

@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Quote from './pages/Quote';
 import ThankYou from './pages/ThankYou';
 import './App.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 function App() {
