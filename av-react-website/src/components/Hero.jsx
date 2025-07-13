@@ -12,15 +12,15 @@ const Hero = ({ setHeroHeightRef }) => {
 
   return (
     <div id="home" className="hero-container" ref={heroRef}>
-      <video autoPlay muted loop className="bg-video">
+      <video autoPlay muted loop playsInline className="bg-video">
         <source src={`${process.env.PUBLIC_URL}/assets/hero.mp4`} type="video/mp4" />
       </video>
 
       <div className="overlay" />
 
       <div className="hero-content text-center container">
-        <h1 className="hero-title">Crafting Spaces That Inspire</h1>
-        <p className="hero-subtitle">Calgary’s trusted renovation partner</p>
+        <h1 className="hero-title">Renovate Better. Live Better.</h1>
+        <p className="hero-subtitle">Premium home renovations, built to inspire.</p>
 
         <div className="hero-buttons mt-4">
           <a href="/quote" className="btn btn-primary me-3">Get a Free Quote</a>
