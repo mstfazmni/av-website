@@ -59,18 +59,18 @@ const CustomNavbar = ({ heroHeight }) => {
               About
             </Nav.Link>
             <Nav.Link
-              href="#contact"
-              className={activeLink === 'contact' ? 'active' : ''}
-              onClick={() => handleNavClick('contact')}
-            >
-              Contact
-            </Nav.Link>
-            <Nav.Link
               href="#projects"
               className={activeLink === 'projects' ? 'active' : ''}
               onClick={() => handleNavClick('projects')}
             >
               Projects
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className={activeLink === 'contact' ? 'active' : ''}
+              onClick={() => handleNavClick('contact')}
+            >
+              Contact
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

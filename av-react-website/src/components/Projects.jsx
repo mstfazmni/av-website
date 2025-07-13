@@ -49,7 +49,7 @@ const Projects = () => {
         <Slider {...sliderSettings}>
           {projectData.map((project, index) => (
             <div key={index} className="p-2">
-              <div className="position-relative rounded overflow-hidden shadow">
+              <div className="position-relative rounded overflow-hidden ">
                 <img
                   src={project.image}
                   alt={project.title}
